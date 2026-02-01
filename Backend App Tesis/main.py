@@ -1,40 +1,17 @@
-# for DL modeling
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import DataLoader,TensorDataset
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-
-# for number crunching
 import numpy as np
-import scipy.stats as stats
-from sklearn.preprocessing import RobustScaler
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-
-# for dataset management
 import pandas as pd
-
-# for data visualization
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Extre libraries
-from datetime import datetime
-
-# FastAPi
-from fastapi import FastAPI, UploadFile
-from fastapi.responses import StreamingResponse
-
-# Models
-from gruModel import ImprovedGRUModel
-
-# Data preprocessing
-from preprocessing import preprocess
 import io
 import csv
 
+from fastapi import FastAPI, UploadFile
+from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
+
+# Local Modules
+from gruModel import ImprovedGRUModel
+from preprocessing import preprocess
 
 
 
