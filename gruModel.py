@@ -10,7 +10,6 @@ from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 # Local Modules
-from gruModel import ImprovedGRUModel
 from preprocessing import preprocess
 
 class ImprovedGRUModel(nn.Module):
